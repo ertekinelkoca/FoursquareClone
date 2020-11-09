@@ -23,6 +23,8 @@ class AddPlaceVC: UIViewController {
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
+        //Segue
+        performSegue(withIdentifier: "toMapVC", sender: nil)
     }
     
 }
