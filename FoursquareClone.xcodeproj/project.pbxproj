@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04910F5A2559E3B00044BD25 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04910F592559E3B00044BD25 /* PlacesVC.swift */; };
 		04FE6E862558713B00511E62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6E852558713B00511E62 /* AppDelegate.swift */; };
 		04FE6E882558713B00511E62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6E872558713B00511E62 /* SceneDelegate.swift */; };
 		04FE6E8A2558713B00511E62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6E892558713B00511E62 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04910F592559E3B00044BD25 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		04FE6E822558713B00511E62 /* FoursquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FE6E852558713B00511E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FE6E872558713B00511E62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				04FE6E8E2558713F00511E62 /* Assets.xcassets */,
 				04FE6E902558713F00511E62 /* LaunchScreen.storyboard */,
 				04FE6E932558713F00511E62 /* Info.plist */,
+				04910F592559E3B00044BD25 /* PlacesVC.swift */,
 			);
 			path = FoursquareClone;
 			sourceTree = "<group>";
@@ -165,7 +168,6 @@
 				DBBB9EAEBED8A9581F2603AB /* Pods-FoursquareCloneTests.debug.xcconfig */,
 				CFBA3FE89641DB0F7ECF58C0 /* Pods-FoursquareCloneTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +411,7 @@
 			files = (
 				04FE6E8A2558713B00511E62 /* ViewController.swift in Sources */,
 				04FE6E862558713B00511E62 /* AppDelegate.swift in Sources */,
+				04910F5A2559E3B00044BD25 /* PlacesVC.swift in Sources */,
 				04FE6E882558713B00511E62 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

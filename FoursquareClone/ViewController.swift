@@ -27,8 +27,8 @@ class ViewController: UIViewController {
                     self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
                 }
                 else{
-                    
                     //Segue
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
                             
                 }
             }
@@ -51,7 +51,6 @@ class ViewController: UIViewController {
                     print("user created")
                 }
             }
-            
         }
     }
     
@@ -61,6 +60,5 @@ class ViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
