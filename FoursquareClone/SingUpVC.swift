@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class SingUpVC: UIViewController {
     
     @IBOutlet weak var usernameText: UITextField!
     
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func signInClicked(_ sender: Any) {
         
         if usernameText.text != "" && passwordText.text != ""{
