@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0403B073255B2F5200B2DF55 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403B072255B2F5200B2DF55 /* DetailsVC.swift */; };
 		04910F5A2559E3B00044BD25 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04910F592559E3B00044BD25 /* PlacesVC.swift */; };
 		04910F652559FCEA0044BD25 /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04910F642559FCEA0044BD25 /* AddPlaceVC.swift */; };
 		04910F6D2559FEFF0044BD25 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04910F6C2559FEFF0044BD25 /* MapVC.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0403B072255B2F5200B2DF55 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		04910F592559E3B00044BD25 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		04910F642559FCEA0044BD25 /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		04910F6C2559FEFF0044BD25 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				04910F592559E3B00044BD25 /* PlacesVC.swift */,
 				04910F642559FCEA0044BD25 /* AddPlaceVC.swift */,
 				04910F6C2559FEFF0044BD25 /* MapVC.swift */,
+				0403B072255B2F5200B2DF55 /* DetailsVC.swift */,
 				04FE6E8B2558713B00511E62 /* Main.storyboard */,
 				04FE6E8E2558713F00511E62 /* Assets.xcassets */,
 				04FE6E902558713F00511E62 /* LaunchScreen.storyboard */,
@@ -419,6 +422,7 @@
 				04910F6D2559FEFF0044BD25 /* MapVC.swift in Sources */,
 				04FE6E862558713B00511E62 /* AppDelegate.swift in Sources */,
 				04910F5A2559E3B00044BD25 /* PlacesVC.swift in Sources */,
+				0403B073255B2F5200B2DF55 /* DetailsVC.swift in Sources */,
 				04910F652559FCEA0044BD25 /* AddPlaceVC.swift in Sources */,
 				04FE6E882558713B00511E62 /* SceneDelegate.swift in Sources */,
 			);
