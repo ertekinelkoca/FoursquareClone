@@ -56,7 +56,7 @@ class AddPlaceVC: UIViewController , UINavigationControllerDelegate , UIImagePic
             let alert = UIAlertController(title: "error", message: "Place Name/Type/Atmosphere??", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(okButton)
-            present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil) 
         }
         
         
