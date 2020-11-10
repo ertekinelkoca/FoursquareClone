@@ -7,6 +7,11 @@
 
 import UIKit
 
+//Global Variable Example , In the real development setting , you should not use it so that in this case , this will be the superior type over classes
+//var globalName = ""
+//var globalType = ""
+//var globalAtmosphere = ""
+
 class AddPlaceVC: UIViewController , UINavigationControllerDelegate , UIImagePickerControllerDelegate{
 
     
@@ -38,7 +43,23 @@ class AddPlaceVC: UIViewController , UINavigationControllerDelegate , UIImagePic
     
     @IBAction func nextButtonClicked(_ sender: Any) {
         //Segue
-        performSegue(withIdentifier: "toMapVC", sender: nil)
+        if placeNameText.text != "" && placeTypeText.text != "" && placeAtmosphereText.text != ""{
+            if let chosenImage = placeImageView.image {
+                let placeModel = PlacesModel.sharedInstance
+                placeModel.placeName = placeNameText.text!
+                placeModel.placeType = placeTypeText.text!
+                placeModel.placeAtmosphere = placeAtmosphereText.text!
+                placeModel.placeImage = chosenImage
+            }
+            performSegue(withIdentifier: "toMapVC", sender: nil)
+        }else{
+            let alert = UIAlertController(title: "error", message: "Place Name/Type/Atmosphere??", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
     }
     
 }
