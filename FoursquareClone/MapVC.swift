@@ -55,14 +55,11 @@ class MapVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelegate{
             annotation.title = PlacesModel.sharedInstance.placeName
             annotation.subtitle = PlacesModel.sharedInstance.placeType
             self.mapView.addAnnotation(annotation )
-            
-            
+        
             PlacesModel.sharedInstance.placeLatitude = String(coordinates.latitude)
             PlacesModel.sharedInstance.placeLongitude = String(coordinates.longitude)
             
         }
-        
-        
     }
     
     
