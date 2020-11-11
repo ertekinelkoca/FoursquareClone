@@ -7,12 +7,15 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class MapVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelegate{
 
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +36,65 @@ class MapVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelegate{
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
+        recognizer.minimumPressDuration = 3
+        mapView.addGestureRecognizer(recognizer)
+        
     }
     
-    @objc func saveButtonClicked(){
-        //Parse
+    @objc func chooseLocation(gestureRecognizer : UIGestureRecognizer){
         
+        if gestureRecognizer.state == UIGestureRecognizer.State.began {
+            
+            let touches = gestureRecognizer.location(in: self.mapView)
+            //converts touched point to the coordinates
+            let coordinates = self.mapView.convert(touches, toCoordinateFrom: self.mapView)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinates
+            annotation.title = PlacesModel.sharedInstance.placeName
+            annotation.subtitle = PlacesModel.sharedInstance.placeType
+            self.mapView.addAnnotation(annotation )
+            
+            
+            PlacesModel.sharedInstance.placeLatitude = String(coordinates.latitude)
+            PlacesModel.sharedInstance.placeLongitude = String(coordinates.longitude)
+            
+        }
+        
+        
+    }
+    
+    
+    
+    @objc func saveButtonClicked(){
+        
+        let placeModel = PlacesModel.sharedInstance
+        
+        //Parse
+        let object = PFObject(className: "Places")
+        object["name"] = placeModel.placeName
+        object["placeType"] = placeModel.placeType
+        object["atmosphere"] = placeModel.placeAtmosphere
+        object["latitude"] = placeModel.placeLatitude
+        object["longitude"] = placeModel.placeLongitude
+        
+        if let imageData = placeModel.placeImage.jpegData(compressionQuality: 0.5){
+            object["image"] = PFFileObject(name: "image.jpg", data: imageData)
+        }
+        
+        object.saveInBackground { (success, error) in
+            
+            if error != nil {
+                let alert = UIAlertController(title: "error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "fromMapVCtoPlacesVC", sender: nil)
+            }
+        }
         
     }
     
