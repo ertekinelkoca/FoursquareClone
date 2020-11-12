@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fA-Wy-K8z">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -104,11 +104,11 @@
             <objects>
                 <viewController id="147-R5-m97" customClass="AddPlaceVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2he-E5-JDu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPn-JP-GlK">
-                                <rect key="frame" x="20" y="85" width="374" height="34"/>
+                                <rect key="frame" x="20" y="173" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="y9r-eg-mqa"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yK-Ic-2D9">
-                                <rect key="frame" x="25" y="159" width="369" height="34"/>
+                                <rect key="frame" x="25" y="247" width="369" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="XHM-hN-jNj"/>
                                 </constraints>
@@ -124,7 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place atmosphere" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nju-Lh-pbK">
-                                <rect key="frame" x="25" y="242" width="369" height="34"/>
+                                <rect key="frame" x="25" y="330" width="369" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="GaN-ZY-CPV"/>
                                 </constraints>
@@ -132,7 +132,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hg-kb-87y">
-                                <rect key="frame" x="121" y="690" width="172" height="30"/>
+                                <rect key="frame" x="121" y="744" width="172" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="htk-Ge-qeh"/>
                                 </constraints>
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clickimage" translatesAutoresizingMaskIntoConstraints="NO" id="aOS-6b-YTr">
-                                <rect key="frame" x="25" y="319" width="369" height="272"/>
+                                <rect key="frame" x="25" y="407" width="369" height="238"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iZf-IF-HWe"/>
@@ -184,7 +184,7 @@
             <objects>
                 <viewController id="t66-Va-PNb" customClass="DetailsVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vAE-Wi-s2P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mae-v2-giT">
@@ -257,7 +257,7 @@
                     <navigationItem key="navigationItem" id="YJW-2M-FXa"/>
                     <connections>
                         <outlet property="mapView" destination="hMd-aE-eAZ" id="Yrp-IG-RBv"/>
-                        <segue destination="qSt-ek-0JW" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="LBl-SO-Akn"/>
+                        <segue destination="5w6-xB-Nbv" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="kCg-ae-Lk3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e41-Ot-vzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -304,7 +304,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LBl-SO-Akn"/>
+        <segue reference="kCg-ae-Lk3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clickimage" width="202" height="249"/>
